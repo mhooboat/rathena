@@ -2128,7 +2128,12 @@ enum e_hat_effects : int16{
 	HAT_EF_C_BABY_GLOOM,
 	HAT_EF_WINTERNIGHTBELLS,
 	HAT_EF_NIGHTSKYOFRUTIE,
-	HAT_EF_MAX
+	/* Custom Hateffects */
+	HAT_EF_arcane_aura_A,
+	HAT_EF_arcane_aura_B,
+	HAT_EF_gluttony_aura_A,
+	HAT_EF_gluttony_aura_B,
+	HAT_EF_MAX = 9999
 };
 
 enum e_convertpcinfo_type : uint8 {

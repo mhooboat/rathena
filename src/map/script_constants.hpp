@@ -11236,6 +11236,12 @@
 	export_constant(MER_DIETER);
 	export_constant(MER_ELEANOR);
 
+	/* Custom Hateffects */
+	export_constant(HAT_EF_arcane_aura_A);
+	export_constant(HAT_EF_arcane_aura_B);
+	export_constant(HAT_EF_gluttony_aura_A);
+	export_constant(HAT_EF_gluttony_aura_B);
+
 	#undef export_constant
 	#undef export_constant2
 	#undef export_parameter
