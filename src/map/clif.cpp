@@ -11621,6 +11621,9 @@ void clif_parse_LoadEndAck(int fd, map_session_data *sd)
 		{ // Don't trigger NPC event or opening vending/buyingstore will be failed
 			// Login Event
 			npc_script_event(sd, NPCE_LOGIN);
+			
+			//Collection Event
+			pc_collection_load(*sd);
 		}
 
 		// Set facing direction before check below to update client

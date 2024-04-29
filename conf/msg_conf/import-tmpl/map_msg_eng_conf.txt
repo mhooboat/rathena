@@ -1,0 +1,5 @@
+// Collection Storage
+1540: [Collection] Collection list %d ea.
+1541: [Collection] Update collection list %d ea.
+1542: [Collection] Item %s is not in collection.
+1543: [Collection] You have item %s in collection.
