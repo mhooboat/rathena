@@ -5196,6 +5196,7 @@
 	export_constant(VIP_STATUS_ACTIVE);
 	export_constant(VIP_STATUS_EXPIRE);
 	export_constant(VIP_STATUS_REMAINING);
+	
 
 	/* item groups */
 	export_constant(IG_BLUEBOX);
@@ -11241,6 +11242,7 @@
 	export_constant(HAT_EF_arcane_aura_B);
 	export_constant(HAT_EF_gluttony_aura_A);
 	export_constant(HAT_EF_gluttony_aura_B);
+
 
 	#undef export_constant
 	#undef export_constant2

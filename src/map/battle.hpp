@@ -752,6 +752,103 @@ struct Battle_Config
 	int feature_banking_state_enforce;
 	int instance_allow_reconnect;
 
+
+	// Add First Use Later
+	int feature_restore_animation_skills;
+
+
+	int enable_extended_vending;
+	int extended_vending_mail;
+
+	int collection_storage_id;
+	int collection_enable_bonus;
+	int collection_bonus_mode;
+	int max_collection_count;
+	int collection_max_stored;
+
+	int feature_goldpc_active;
+	int feature_goldpc_time;
+	int feature_goldpc_max_points;
+	int feature_goldpc_vip;	
+
+	// MvP and Mini-Boss Card Ad and Log System [Bad]
+	int announcement_and_log_system;
+	int mvp_card_announce_system;
+	int mvp_card_announce;
+	int dropped_mvp_card_log;
+	int set_drop_announce_color;
+	int mini_boss_card_announce_system;
+	int mini_boss_card_announce;
+	int dropped_mini_boss_card_log;
+	int set_drop_card_announce_color;
+
+	int afk_timeout;
+
+	int max_sale_healing;
+	int max_sale_usable;
+	int max_sale_weapon;
+	int max_sale_armor;
+	int max_sale_etc;
+
+	// auto attack
+	int autoattack_skillheal;
+	int autoattack_item_potion;
+	int autoattack_sittorest;
+	int autoattack_skill_attack;
+	int autoattack_skill_buff;
+	int autoattack_item_buff;
+	int autoattack_teleport;
+	int autoattack_item_pickup;
+	int autoattack_mselection;
+	int autoattack_item_range_detection;
+	int autoattack_mob_detection;
+	int autoattack_move;
+	int autoattack_move_type;
+	int autoattack_interval_timer;
+	int autoattack_pickup_delay;
+	int autoattack_clean_logout;
+	int autoattack_hateffect;
+	int autoattack_skill_rate_default;
+	int autoattack_reduce_droprate;
+	int autoattack_reduce_mode;
+
+	// max % resistance
+	int max_subele_resist;
+	int max_subdefele_resist;
+	int max_magicsubdefele_resist;
+	int max_subrace_resist;
+	int max_subclass_resist;
+	int max_subsize_resist;
+	int max_short_attack_def_rate;
+	int max_long_attack_def_rate;
+	int max_magic_def_rate;
+	int max_misc_def_rate;	
+
+	int pickup_item_motion_time;
+	int attack_motion_time;
+
+	int	ext_short_attack_damage_rate;
+	int	ext_long_attack_damage_rate;
+	int	ext_weapon_attack_damage_rate;
+	int	ext_magic_attack_damage_rate;
+	int	ext_misc_attack_damage_rate;
+
+	int	ext2_short_attack_damage_rate;
+	int	ext2_long_attack_damage_rate;
+	int	ext2_weapon_attack_damage_rate;
+	int	ext2_magic_attack_damage_rate;
+	int	ext2_misc_attack_damage_rate;
+
+	int greed_teleport_delay;
+
+	int refine_announce_success;
+	int refine_announce_broken;
+	int refine_option_announce;
+	int refine_option_color;
+	int refine_option_color_self;
+	int refine_broken_color;
+	int refine_normal_color;
+
 #include <custom/battle_config_struct.inc>
 };
 

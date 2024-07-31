@@ -3030,6 +3030,43 @@ struct s_roulette_db
 };
 extern struct s_roulette_db rd;
 
+/// Item combo struct
+struct s_item_collection_combo {
+	std::vector<t_itemid> nameid;
+	script_code *script;
+	uint16 id;
+
+	~s_item_collection_combo() {
+		if (this->script) {
+			script_free_code(this->script);
+			this->script = nullptr;
+		}
+
+		this->nameid.clear();
+	}
+};
+
+class CollectionComboDatabase : public TypesafeYamlDatabase<uint16, s_item_collection_combo> {
+private:
+	uint16 combo_num;
+	uint16 find_combo_id( const std::vector<t_itemid>& items );
+
+public:
+	CollectionComboDatabase() : TypesafeYamlDatabase("COLLECTION_COMBO_DB", 1) {
+
+	}
+
+	void clear() override{
+		TypesafeYamlDatabase::clear();
+		this->combo_num = 0;
+	}
+	const std::string getDefaultLocation() override;
+	uint64 parseBodyNode(const ryml::NodeRef& node) override;
+	void loadingFinished() override;
+};
+
+extern CollectionComboDatabase collection_combo_db;
+
 /// Main item data struct
 struct item_data
 {
@@ -3040,6 +3077,7 @@ struct item_data
 	uint32 value_sell;
 	item_types type;
 	uint8 subtype;
+	std::map<std::string, uint16> decompoRune;
 	int maxchance; // For logs, for external game info, for scripts: Max drop chance of this item (e.g. 0.01% , etc.. if it = 0, then monsters don't drop it, -1 denotes items sold in shops only) [Lupus]
 	uint8 sex;
 	uint32 equip;
@@ -3104,6 +3142,7 @@ struct item_data
 	} item_usage;
 	short gm_lv_trade_override; // GM-level to override trade_restriction
 	std::vector<std::shared_ptr<s_item_combo>> combos;
+	std::vector<std::shared_ptr<s_item_collection_combo>> collection_combos;
 	struct
 	{
 		uint32 duration;

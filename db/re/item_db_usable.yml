@@ -76814,6 +76814,8 @@ Body:
       NoGuildStorage: true
       NoMail: true
       NoAuction: true
+    Script: |
+      atcommand "@vip +30d "+strcharinfo(0);atcommand "@vip +30d "+strcharinfo(0);
   - Id: 102247
     AegisName: VIP_Gift
     Name: VIP Gift
