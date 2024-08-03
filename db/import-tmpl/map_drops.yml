@@ -42,10 +42,3 @@
 Header:
   Type: MAP_DROP_DB
   Version: 2
-
-  Body:
-  - Map: pprontera_c
-    GlobalDrops:
-    - Index: 0
-      Item: Apple
-      Rate: 10000
